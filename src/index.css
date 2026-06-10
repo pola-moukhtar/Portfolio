@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #ffffff;
+    --bg-secondary: #F9FAFB;
+    --bg-card: #ffffff;
+    --text-primary: #111827;
+    --text-secondary: #6B7280;
+    --border: #E5E7EB;
+    --accent: #2563EB;
+    --accent-light: #EFF6FF;
+    --accent-mid: #BFDBFE;
+    --nav-h: 68px;
+  }
+
+  .dark {
+    --bg: #0F1117;
+    --bg-secondary: #161B22;
+    --bg-card: #1C2128;
+    --text-primary: #F0F6FC;
+    --text-secondary: #8B949E;
+    --border: #30363D;
+    --accent: #58A6FF;
+    --accent-light: #1C2128;
+    --accent-mid: #1F3A5F;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background-color: var(--bg);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  * {
+    @apply box-border;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-6;
+  }
+
+  .card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    @apply rounded-2xl transition-all duration-300;
+  }
+
+  .card:hover {
+    border-color: var(--accent-mid);
+  }
+
+  .skill-tag {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    @apply text-xs font-medium px-3 py-1.5 rounded-full transition-all duration-200;
+  }
+
+  .skill-tag:hover {
+    border-color: var(--accent-mid);
+    color: var(--accent);
+  }
+
+  .chip {
+    background-color: var(--accent-light);
+    border: 1px solid var(--accent-mid);
+    color: var(--accent);
+    @apply text-xs font-semibold px-2 py-0.5 rounded-md;
+  }
+
+  .ttech {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    @apply text-xs font-semibold px-2.5 py-1 rounded-lg;
+  }
+}
+
+@layer utilities {
+  .text-primary {
+    color: var(--text-primary);
+  }
+
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+
+  .bg-base {
+    background-color: var(--bg);
+  }
+
+  .bg-secondary {
+    background-color: var(--bg-secondary);
+  }
+
+  .bg-card {
+    background-color: var(--bg-card);
+  }
+
+  .border-base {
+    border-color: var(--border);
+  }
+
+  .border-accent-mid {
+    border-color: var(--accent-mid);
+  }
+
+  .text-accent {
+    color: var(--accent);
+  }
+
+  .bg-accent-light {
+    background-color: var(--accent-light);
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-mid); }
