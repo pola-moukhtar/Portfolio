@@ -74,7 +74,8 @@ export default function Hero() {
             <Button href="#projects" variant="primary">
               View Projects <span>→</span>
             </Button>
-            <Button variant="outline" href="public/pola_mokhtar_CV.pdf" target="_blank" rel="noopener">
+            
+            <Button variant="outline" href={`${import.meta.env.BASE_URL}pola_mokhtar_CV.pdf`} target="_blank" rel="noopener noreferrer">
               Download CV <span>↓</span>
             </Button>
           </motion.div>
