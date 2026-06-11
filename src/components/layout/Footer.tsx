@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="section-container flex items-center justify-between flex-wrap gap-4">
         <p className="text-sm text-secondary">
           Designed and Developed by{' '}
-          <span className="font-semibold text-primary">Pola Mokhtar</span>{' '}
+          <span className="font-semibold text-primary">Paula Moukhtar</span>{' '}
           &copy; {new Date().getFullYear()}
         </p>
         <div className="flex items-center gap-4">
@@ -22,7 +22,7 @@ export default function Footer() {
             <FiGithub size={16} /> GitHub
           </a>
           <a
-            href="https://linkedin.com/in/pola-moukhtar"
+            href="https://www.linkedin.com/in/paula-moukhtar"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-sm text-secondary font-medium hover:text-accent transition-colors"

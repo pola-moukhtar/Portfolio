@@ -19,6 +19,7 @@ export interface Project {
   lessons?: string
   metrics?: ProjectMetric[]
   githubUrl?: string
+  demoUrl?: string
 }
 
 export interface SkillCategory {
