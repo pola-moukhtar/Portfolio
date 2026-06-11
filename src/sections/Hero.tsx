@@ -39,7 +39,7 @@ export default function Hero() {
               className="bg-gradient-to-br from-accent to-purple-600 bg-clip-text"
               style={{ WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
             >
-              Pola Mokhtar
+              Paula Moukhtar
             </span>
           </motion.h1>
 
@@ -74,10 +74,7 @@ export default function Hero() {
             <Button href="#projects" variant="primary">
               View Projects <span>→</span>
             </Button>
-            <Button
-              variant="outline"
-              onClick={() => alert('CV download coming soon!')}
-            >
+            <Button variant="outline" href="public/pola_mokhtar_CV.pdf" target="_blank" rel="noopener">
               Download CV <span>↓</span>
             </Button>
           </motion.div>
