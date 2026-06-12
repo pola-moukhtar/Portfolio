@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img src="banner.png" alt="Portfolio Banner" width="100%">
+  <img src="src/assets/images/banner.png" alt="Portfolio Banner" width="100%">
 </p>
 
 
@@ -15,7 +15,7 @@ A modern, responsive personal portfolio showcasing AI/ML projects, technical ski
 ## 📺 Portfolio Demo
 
 <div align="center">
-  <img src="demo.gif" alt="Portfolio Demo" width="100%">
+  <img src="src/assets/gifs/demo.gif" alt="Portfolio Demo" width="100%">
 </div>
 
 ---

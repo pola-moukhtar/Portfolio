@@ -50,7 +50,13 @@ export interface Certificate {
   id: string
   name: string
   organization: string
-  emoji: string
+  image?: string
+  date?: string
+  description?: string
+  skills?: string[]
+  credentialId?: string
+  verifyUrl?: string
+  emoji?: string
 }
 
 export interface Service {
