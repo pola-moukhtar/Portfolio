@@ -55,7 +55,9 @@ export default function ProjectCard({ project, featured, onClick, index }: Proje
           <div className="absolute inset-0 flex items-center justify-center text-[120px] opacity-5 select-none">
             {project.emoji}
           </div>
-          <span className="text-6xl relative z-10">{project.emoji}</span>
+          {project.image ? (<img src={project.image} alt={project.name} 
+          className="w-full h-full object-cover"/>) : (<span className="text-5xl relative z-10">{project.emoji}</span>)}
+
           <span className="absolute top-3 right-3 bg-accent text-white text-[11px] font-bold px-2.5 py-1 rounded-full tracking-wide">
             FEATURED
           </span>

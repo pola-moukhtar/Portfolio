@@ -1,5 +1,6 @@
 import type { Project } from '../types/project'
-
+import plantVideo from '../assets/videos/plant-demo.mp4'
+import banner_plant from '../assets/images/banner plant.png'
 export const projects: Project[] = [
   {
     id: 'plant',
@@ -7,6 +8,7 @@ export const projects: Project[] = [
     category: 'ai',
     featured: true,
     emoji: '🌿',
+    coverImage: banner_plant,
     chips: ['Python', 'TensorFlow', 'Keras', 'MobileNetV2', 'Streamlit'],
     description:
       'Deep learning solution for plant disease detection across 38 classes using transfer learning. Deployed as a live Streamlit app.',
@@ -23,6 +25,11 @@ export const projects: Project[] = [
       { value: '38', label: 'Disease Classes' },
       { value: 'Streamlit', label: 'Deployment' },
     ],
+    videoUrl: plantVideo,
+    githubUrl: 'https://github.com/pola-moukhtar/Plant-Disease-Classification.git',
+    demoUrl: 'https://plant-disease-classification-nn.streamlit.app',
+    Linkedinpost: 'https://www.linkedin.com/posts/bavly-hany-445385305_datascience-machinelearning-deeplearning-activity-7462282178136047616-oqHO?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEjZe-cBDVdSHGFTvZkFoKzLYDvITfiZ0Yw',
+
   },
   {
     id: 'nids',

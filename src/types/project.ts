@@ -8,9 +8,11 @@ export interface ProjectMetric {
 export interface Project {
   id: string
   name: string
+  coverImage?: string
   category: ProjectCategory
   featured?: boolean
-  emoji: string
+  emoji?: string
+  image?: string
   chips: string[]
   description: string
   overview: string
@@ -20,6 +22,10 @@ export interface Project {
   metrics?: ProjectMetric[]
   githubUrl?: string
   demoUrl?: string
+  screenshots?: string[]
+  videoUrl?: string
+  Linkedinpost?: string
+
 }
 
 export interface SkillCategory {

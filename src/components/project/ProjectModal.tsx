@@ -48,17 +48,19 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           >
             {/* Header */}
             <div
-              className="sticky top-0 bg-base z-10 px-8 pt-7 pb-5 rounded-t-3xl"
+             className=" top-0 bg-base z-10 px-8 pt-7 pb-5 rounded-t-3xl"
               style={{ borderBottom: '1px solid var(--border)' }}
             >
-              <div className="flex flex-wrap gap-2 mb-3">
+             
+              <h1 id="modal-title" className="font-display text-2xl font-bold text-primary pr-10">
+                {project.name }
+              </h1>
+           
+              <div className="flex flex-wrap gap-2 mb-1">
                 {project.chips.map(chip => (
                   <span key={chip} className="chip">{chip}</span>
                 ))}
               </div>
-              <h2 id="modal-title" className="font-display text-2xl font-bold text-primary pr-10">
-                {project.name}
-              </h2>
               <button
                 onClick={onClose}
                 className="absolute top-5 right-5 w-9 h-9 rounded-xl flex items-center justify-center text-secondary hover:text-primary transition-colors"
@@ -71,10 +73,26 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
             {/* Body */}
             <div className="px-8 py-8 flex flex-col gap-8">
+
+            {/* Cover Image */}
+            {project.coverImage && (
+              <div
+                className="overflow-hidden rounded-2xl"
+                style={{ border: '1px solid var(--border)' }}
+              >
+                <img
+                  src={project.coverImage}
+                  alt={`${project.name} cover`}
+                  className="w-full aspect-video object-cover"
+                />
+              </div>
+            )}
+
               {/* Overview */}
               <Section title="Overview">
                 <p className="text-[15px] text-secondary leading-[1.75]">{project.overview}</p>
               </Section>
+
 
               {/* Metrics */}
               {project.metrics && project.metrics.length > 0 && (
@@ -130,9 +148,10 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 </div>
               </Section>
 
-              {/* GitHub */}
-              {project.githubUrl && (
-                <div>
+             {/* Links */}
+            {(project.githubUrl || project.demoUrl || project.Linkedinpost) && (
+              <div className="flex flex-wrap gap-3">
+                {project.githubUrl && (
                   <a
                     href={project.githubUrl}
                     target="_blank"
@@ -140,10 +159,70 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                     className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-primary hover:text-accent hover:border-accent-mid transition-colors"
                     style={{ border: '1.5px solid var(--border)' }}
                   >
-                    <FiExternalLink size={15} /> View on GitHub
+                    <FiExternalLink size={15} />
+                    View on GitHub
                   </a>
-                </div>
+                )}
+
+                {project.demoUrl && (
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-primary hover:text-accent hover:border-accent-mid transition-colors"
+                    style={{ border: '1.5px solid var(--border)' }}
+                  >
+                    <FiExternalLink size={15} />
+                    Deployment
+                  </a>
+                )}
+
+                {project.Linkedinpost && (
+                  <a
+                    href={project.Linkedinpost}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-primary hover:text-accent hover:border-accent-mid transition-colors"
+                    style={{ border: '1.5px solid var(--border)' }}
+                  >
+                    <FiExternalLink size={15} />
+                    LinkedIn Post
+                  </a>
+                )}
+              </div>
+            )}
+
+
+
+              {/* VideoUrl */}
+              {project.videoUrl && (
+              <Section title="Demo Video">
+                <iframe
+                  src={project.videoUrl}
+                  className="w-full aspect-video rounded-xl"
+                  allowFullScreen
+                />
+              </Section>
+            )}
+
+
+              {/* Screenshots */}
+              {project.screenshots && (
+                <Section title="Screenshots">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    {project.screenshots.map((img, index) => (
+                      <img
+                        key={index}
+                        src={img}
+                        alt={`${project.name}-${index}`}
+                        className="rounded-xl border"
+                      />
+                    ))}
+                  </div>
+                </Section>
               )}
+
+
             </div>
           </motion.div>
         </motion.div>

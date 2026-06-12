@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion'
 import Button from '../components/ui/Button'
 
-const STATS = [
-  { value: '95.05%', label: 'Plant Disease Classification Accuracy' },
-  { value: '2.8M+', label: 'Network Intrusion Detection Records' },
-  { value: '7+', label: 'Machine Learning Models Compared' },
-]
+// const STATS = [
+  // { value: '95.05%', label: 'Plant Disease Classification Accuracy' },
+  // { value: '2.8M+', label: 'Network Intrusion Detection Records' },
+  // { value: '7+', label: 'Machine Learning Models Compared' },
+// ]
 
 export default function Hero() {
   return (
@@ -80,7 +80,7 @@ export default function Hero() {
             </Button>
           </motion.div>
 
-          {/* Stats */}
+          {/* Stats
           <div className="grid grid-cols-3 gap-3">
             {STATS.map((stat, i) => (
               <motion.div
@@ -98,7 +98,7 @@ export default function Hero() {
                 <div className="text-[10px] sm:text-xs text-secondary leading-snug">{stat.label}</div>
               </motion.div>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Right — animated visual */}
